@@ -1,7 +1,13 @@
 import axios from "axios";
 
+const rawApiUrl =
+  import.meta.env.VITE_API_URL ||
+  "https://wmtlabtestproject-production-cb14.up.railway.app";
+
+const normalizedApiUrl = rawApiUrl.replace(/^http:\/\//i, "https://").replace(/\/$/, "");
+
 const API = axios.create({
-  baseURL: (import.meta.env.VITE_API_URL || "http://wmtlabtestproject-production-cb14.up.railway.app") + "/api",
+  baseURL: `${normalizedApiUrl}/api`,
 });
 
 export const getItems = () => API.get("/items");
