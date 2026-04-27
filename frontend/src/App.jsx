@@ -3,7 +3,7 @@ import Navbar from "./components/Navbar.jsx";
 import HomePage from "./pages/HomePage.jsx";
 import AddItemPage from "./pages/AddItemPage.jsx";
 import EditItemPage from "./pages/EditItemPage.jsx";
-const API_URL = import.meta.env.VITE_API_URL || "http://wmtlabtestproject-production-cb14.up.railway.app";
+const API_URL = import.meta.env.VITE_API_URL || "http://localhost:5000/api";
 function App() {
   return (
     <>
